@@ -1,0 +1,116 @@
+:root{
+    --first-bg-color: #bbd2c5;
+    --scnd-bg-color: -webkit-linear-gradient(to right, #bbd2c5, #536976, #292e49); /* Chrome 10-25, Safari 5.1-6 */;
+    --thrd-bg-color: linear-gradient(to right, #bbd2c5, #536976, #292e49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    --primary-font-color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--first-bg-color);
+    background: var(--scnd-bg-color);
+    background: var(--thrd-bg-color);
+    color: var(--primary-font-color);
+}
+
+p{
+    text-align: center;
+}
+
+button{
+    text-decoration: none;
+    padding: 5px;
+    padding: .7em .9em;
+    border-radius: .4em;
+}
+button:hover{
+    background-color: rgb(74, 129, 125);
+    color: white;
+    
+}
+
+img{
+    transition: 0.5s;
+
+}
+
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80vh;
+    margin-bottom: 4em;
+}
+
+.score-keeper{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.display-winner{
+    width: 100%;
+    margin: 40px;
+    font-size: 30px;
+}
+
+
+.hands{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.play-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.reset-game{
+    width: 17%;
+    display: block;
+}
+
+img.player-hand{
+    transform: rotateY(180deg);
+}
+
+button.reset-game{
+    margin: 3rem auto;
+    max-width: 10em;
+}
+
+/* Animations for the Hands */
+
+@keyframes shakePlayerHand{
+    0%{ transform: rotateY(180deg) translateY(0);}
+    15%{ transform: rotateY(180deg) translateY(-50px);}
+    25%{ transform: rotateY(180deg) translateY(0);}
+    35%{ transform: rotateY(180deg) translateY(-50px);}
+    50%{ transform: rotateY(180deg) translateY(0) ;}
+    65%{ transform: rotateY(180deg) translateY(-50px);}
+    75%{ transform: rotateY(180deg) translateY(0);}
+    85%{ transform: rotateY(180deg) translateY(-50px);}
+    100%{ transform: rotateY(180deg) translateY(0);}
+}
+
+
+@keyframes shakeCpuHand{
+    0%{ transform: translateY(0);}
+    15%{ transform: translateY(-50px);}
+    25%{ transform: translateY(0);}
+    35%{ transform: translateY(-50px);}
+    50%{ transform: translateY(0);}
+    65%{ transform: translateY(-50px);}
+    75%{ transform: translateY(0);}
+    85%{ transform: translateY(-50px);}
+    100%{ transform: translateY(0);}
+}

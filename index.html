@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock Paper Scissors Game</title>
+</head>
+<body>
+    <section class="game-container">
+
+        <div class="score-keeper">
+            <div class="sc__player-count">
+                <h2 class="player-score">Player</h2>
+                <p>0</p>
+            </div>
+            <div class="sc__cpu-count">
+                <h2 class="cpu-score">Computer</h2>
+                <p>0</p>
+            </div>
+           
+        </div>
+
+        <div class="display-winner">
+            <p>Let the game begin</p>
+        </div>
+
+        <div class="hands">
+            <img src="/assets/rock.png" alt="Player rock hand" class="player-hand" id="player-hand">
+            <img src="/assets/rock.png" alt="CPU rock hand" class="cpu-hand" id="cpu-hand">
+        </div>
+
+        <div class="play-options">
+            <button id="rock">rock</button>
+            <button id="paper">paper</button>
+            <button id="scissors">scissors</button>
+        </div>
+        
+    </section>
+
+    <button class="reset-game" id="reset-game">Reset Score</button>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
